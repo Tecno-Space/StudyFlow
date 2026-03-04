@@ -72,9 +72,12 @@ taskForm.addEventListener("submit", function (e) {
 
 // Eliminar tarea
 function deleteTask(id) {
-    tasks = tasks.filter(task => task.id !== id);
-    saveTasks();
-    renderTasks();
+    
+    if (confirm("¿Estás seguro de que quieres eliminar esta tarea?")) {
+        tasks = tasks.filter(task => task.id !== id);
+        saveTasks();
+        renderTasks();
+    }
 }
 
 // Marcar como completada
