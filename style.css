@@ -1,0 +1,226 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f6f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Secciones */
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* Formulario */
+form {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #2d2d2d;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* Lista de tareas */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Tarjeta de tarea */
+.task {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s ease;
+}
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.task small {
+    color: #777;
+    font-size: 12px;
+}
+
+/* Prioridades */
+.priority-Baja {
+    border-left: 5px solid #bdbdbd;
+}
+
+.priority-Media {
+    border-left: 5px solid #f0ad4e;
+}
+
+.priority-Alta {
+    border-left: 5px solid #d9534f;
+}
+
+/* Tarea completada */
+.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+/* Botones dentro de tarea */
+.task-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.task-buttons button {
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+/* Pomodoro */
+.timer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#time {
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.timer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* ============================= */
+/* RESPONSIVE - MOBILE */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 25px;
+        border-radius: 10px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .task {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .task-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .task-buttons button {
+        flex: 1;
+    }
+
+    #time {
+        font-size: 40px;
+    }
+
+    .timer-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .timer-buttons button {
+        width: 100%;
+    }
+}
