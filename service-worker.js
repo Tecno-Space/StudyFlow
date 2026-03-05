@@ -1,4 +1,4 @@
-const CACHE_NAME = "studyflow-v2"; // cambia versión cuando actualices fuerte
+const CACHE_NAME = "studyflow-v4"; // cambia versión cuando actualices fuerte
 
 const urlsToCache = [
   "/",
@@ -41,6 +41,8 @@ self.addEventListener("activate", event => {
 
 // Fetch
 self.addEventListener("fetch", event => {
+  if (event.request.method !== "GET") return;
+
   event.respondWith(
     fetch(event.request)
       .then(response => {
