@@ -177,6 +177,12 @@ if (currentTime <= 0) {
     }, 1000);
 }
 
+// Pausar temporizador
+function pauseTimer() {
+    clearInterval(timerInterval);
+    timerInterval = null;
+}
+
 // Reiniciar temporizador
 function resetTimer() {
     clearInterval(timerInterval);
@@ -188,6 +194,7 @@ function resetTimer() {
 }
 
 startBtn.addEventListener("click", startTimer);
+stopBtn.addEventListener("click", pauseTimer);
 resetBtn.addEventListener("click", resetTimer);
 
 // Inicializar contador
