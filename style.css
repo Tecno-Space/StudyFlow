@@ -124,7 +124,6 @@ button:hover {
 /* Tarea completada */
 .completed {
     opacity: 0.6;
-    text-decoration: line-through;
 }
 
 /* Botones dentro de tarea */

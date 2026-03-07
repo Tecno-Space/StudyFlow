@@ -39,7 +39,7 @@ function renderTasks() {
 
             <div class="task-buttons">
                 <button onclick="toggleComplete(${task.id})">
-                    ${task.completed ? "Desmarcar" : "Completar"}
+                    ${task.completed ? "Completado" : "Completar"}
                 </button>
                 <button onclick="deleteTask(${task.id})">
                     Eliminar
